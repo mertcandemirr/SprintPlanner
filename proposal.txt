@@ -1,0 +1,57 @@
+Description of the Project: Fully describe what you will do: create, design, investigate, build, learn, produce, develop, etc.
+
+-This Spring Boot project aims to simplify the sprint planning process for software teams, making collaboration more efficient. I will be using HTML, CSS, JS, and Java Server Faces (JSF) to create a user-friendly interface that's easy to interact with.
+
+To start off, I'll delve into different ways of planning sprints and jot down what I find in a Software Design Document (SDD). This document will be like a roadmap, helping me know where to go next.
+
+If I come across any new Spring Boot libraries I need to learn, I'll take some time to figure it out before I start building. I'm planning to set up different user roles, like project managers and team members. They will log in with their own username and passwords. Project managers can add tasks with details like who is doing it, when it is due, and how big of a task it is in terms of story points. When some job assigned to a developer, the task goes straight to their profile page.
+
+All the info about tasks and users will be kept in a MySQL database. For the story point part, it is kind of a secret until everyone votes. After voting, I, with the right permissions, can reveal the points, keeping things fair.
+
+After I have built everything, I will make sure it all works the way it should through testing. And I won't be doing this alone; I will seek my consultant's help for new ideas. It is like a brainstorm to make the project even better.
+
+Finally, I will getting some documentation ready for a final presentation. This document is like a storybook for anyone checking out the project. It covers everything from the start of the idea to the end of making it real. So, that is the plan to making sprint planning easy and smooth for software teams.
+
+------------------------------------------------------------------------------------
+
+Rationale for, and significance of the project: Why do you prefer to do this project? How does it connect to your academic, or career objectives? What is unique/new about it? What is different about it from the ones already existing, if any? 
+
+-The primary reason for choosing to undertake this project is rooted in the need to more efficiently manage sprint workload assessments in companies engaged in sprint development. This project has been designed to align with both my career objectives and academic interests.
+
+ Sprint workload assessments play a critical role in determining project priorities and estimating workloads within a team. This project aims to provide a solution to manage these processes more effectively and user-friendly.
+
+Furthermore, this project differentiates itself from existing solutions. Particularly, it emphasizes customizability and flexibility features to facilitate the management of sprint workload assessments more easily with a user-friendly interface. 
+
+This project will not only contribute to achieving my career goals but also provide an opportunity to deliver an innovative solution that adds value to the industry, offering both customizability and flexibility for managing sprint workload assessments. 
+
+------------------------------------------------------------------------------------
+
+Prior Knowledge and Skills: What do you already know regarding your project? What have you already done in this area? 
+
+-I'm quite comfortable with Spring Boot technology which I will be using for this project. I have worked on Spring Boot project before, so I'm familiar with building robust and scalable applications using it.
+
+On top of that, I've been part of sprint planning meetings in previous jobs. Being in these meetings gave me a firsthand look at how teams decide on workloads and priorities. It's clear to me that having efficient tools is crucial for smooth planning and estimating how much work can be done in a sprint.
+
+------------------------------------------------------------------------------------
+
+Learning Challenges: How will this project be a new and meaningful learning challenge for you? 
+
+-Understanding Spring Boot better and using it in a real project will further strengthen my existing knowledge.
+
+Focusing on sprint workload assessments will provide me with more insights into agile methodologies.
+
+This project requires me to enhance my skills in user-friendly interfaces and customization.
+
+In summary, this project is not just about coding; it also offers an opportunity to gain skills in integrating various technologies, understanding agile methodologies, and improving user experience.
+
+------------------------------------------------------------------------------------
+
+This project must satisfy the "complex system requirement" described in the course syllabus. A “complex system” is a software/hardware system with multiple interacting components. Consider not the functionality but the architectural point of view.  Choose the appropriate items below.
+-USER INTERFACE: You will implement a (WEB INTERFACE)
+You must choose at least 2 interacting components from the following list: 
+-Web Services
+-Database Integration
+
+Explain the interaction between those components:Providing access to users' jobs from the database
+
+

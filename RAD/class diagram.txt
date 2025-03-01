@@ -1,0 +1,112 @@
++-----------------------------------------+
+|                 SprintApp               |
+|-----------------------------------------|
+| - sprintService: SprintService          |
+| - userService: UserService              |
+| - taskService: TaskService              |
+| - teamService: TeamService              |
+| - pointService: PointService            |
+|-----------------------------------------|
+| + main(args: String[]): void            |
++-----------------------------------------+
+
++--------------------------+                  +------------------------+
+|      SprintService       |                  |      UserService       |
+|--------------------------|                  |------------------------|
+| - sprintRepository: SprintRepository        | - userRepository: UserRepository |
+| - taskRepository: TaskRepository            |------------------------|
+| - teamRepository: TeamRepository            | - save(user: User): User |
+|--------------------------|                  | - findById(id: Long): Optional<User> |
+| - createSprint(sprint: Sprint): Sprint      | - findByUsername(username: String): Optional<User>|
+| - updateSprint(sprint: Sprint): Sprint      |------------------------|
+| - deleteSprint(id: Long): void              | - getAllUsers(): List<User> |
+| - getSprintById(id: Long): Optional<Sprint> |                        |
+| - getAllSprints(): List<Sprint>             |                        |
++--------------------------+                  +------------------------+
+
++--------------------------+                    +------------------------+
+|       TaskService        |                    |       TeamService       |
+|--------------------------|                    |------------------------|
+| - taskRepository: TaskRepository              | - teamRepository: TeamRepository |
+| - userService: UserService                    |------------------------|
+|--------------------------|                    | - save(team: Team): Team |
+| - createTask(task: Task, sprintId: Long): Task| - findById(id: Long): Optional<Team> |
+| - updateTask(task: Task): Task                | - getAllTeams(): List<Team> |
+| - deleteTask(id: Long): void                  |                        |
+| - getTaskById(id: Long): Optional<Task>       +------------------------+
+| - getAllTasksBySprint(sprintId: Long): List<Task>
++--------------------------+                       
+
++--------------------------+                       +------------------------+
+|      PointService        |                       |    UserRepository      |
+|--------------------------|                       |------------------------|
+| - pointRepository: PointRepository               | - findByUsername(username: String): Optional<User> |
+| - taskRepository: TaskRepository                 |------------------------|
+|--------------------------|                       | - findAllByRolesIn(roles: Set<Role>): List<User> |
+| - createPoint(point: Point, taskId: Long): Point |                        |
+| - updatePoint(point: Point): Point               |                        |
+| - deletePoint(id: Long): void                    |                        |
+| - getPointById(id: Long): Optional<Point>        |                        |
+| - getAllPointsByTask(taskId: Long): List<Point>  |                        |
++--------------------------+                       +------------------------+
+
++--------------------------+
+|        Sprint            |
+|--------------------------|
+| - id: Long               |
+| - name: String           |
+| - startDate: LocalDate   |
+| - endDate: LocalDate     |
++--------------------------+
+
++--------------------------+
+|        Task              |
+|--------------------------|
+| - id: Long               |
+| - name: String           |
+| - description: String    |
+| - sprint: Sprint         |
+| - assignedTo: User       |
+| - status: TaskStatus     |
++--------------------------+
+
++--------------------------+
+|        Team              |
+|--------------------------|
+| - id: Long               |
+| - name: String           |
+| - members: List<User>    |
++--------------------------+
+
++--------------------------+
+|        User              |
+|--------------------------|
+| - id: Long               |
+| - username: String       |
+| - password: String       |
+| - roles: Set<Role>       |
++--------------------------+
+
++--------------------------+
+|        Point             |
+|--------------------------|
+| - id: Long               |
+| - value: int             |
+| - voter: User            |
+| - task: Task             |
++--------------------------+
+
++--------------------------+
+|        Role              |
+|--------------------------|
+| - id: Long               |
+| - name: String           |
++--------------------------+
+
++--------------------------+
+|      TaskStatus          |
+|--------------------------|
+| - TODO                   |
+| - IN_PROGRESS            |
+| - DONE                   |
++--------------------------+
